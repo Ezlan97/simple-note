@@ -9,7 +9,7 @@ use App\Notes;
 class NoteController extends Controller
 {
     public function index() {
-        $notes = Notes::all();
+        $notes = Notes::orderBy('created_at', 'desc')->paginate(2);
         return view('home', compact('notes'));
     }
 

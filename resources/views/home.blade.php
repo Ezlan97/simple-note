@@ -35,6 +35,10 @@
                 </div>
             @endforeach            
         </div>
+        <br>
+        <div class="justify-content-center">            
+            {!! $notes->render() !!}
+        </div>
         @endif
         </div>
     </div>
